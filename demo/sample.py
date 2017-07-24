@@ -7,8 +7,11 @@ Created on 2017/7/24
 """
 __author__ = 'HomgWu'
 import threading
+from sys import argv, path
+import os
+
+path.append(os.path.abspath('%s/..' % path[0]))
 from eprogress import LineProgress, CircleProgress, MultiProgressManager
-from sys import argv
 
 
 def mock_multi_progress(progress_manager, sleep_time):
@@ -33,16 +36,22 @@ if __name__ == '__main__':
     thread_pool = []
     if which == 1:
         # circle
-        circle_progress = CircleProgress(title='circle_thread')
-        circle_thread = threading.Thread(target=mock_single_progress, args=(circle_progress, 0.1))
-        thread_pool.append(circle_thread)
-        circle_thread.start()
+        circle_progress = CircleProgress(title='circle loading')
+        # circle_thread = threading.Thread(target=mock_single_progress, args=(circle_progress, 0.1))
+        # thread_pool.append(circle_thread)
+        # circle_thread.start()
+        for i in range(1, 101):
+            circle_progress.update(i)
+            time.sleep(0.1)
     elif which == 2:
         # line
-        line_progress = LineProgress(title='line thread')
-        line_thread = threading.Thread(target=mock_single_progress, args=(line_progress, 0.05))
-        thread_pool.append(line_thread)
-        line_thread.start()
+        line_progress = LineProgress(title='line progress')
+        for i in range(1, 101):
+            line_progress.update(i)
+            time.sleep(0.05)
+        # line_thread = threading.Thread(target=mock_single_progress, args=(line_progress, 0.05))
+        # thread_pool.append(line_thread)
+        # line_thread.start()
     elif which == 3:
         # multi line
         progress_manager = MultiProgressManager()
