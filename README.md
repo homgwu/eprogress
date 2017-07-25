@@ -6,7 +6,7 @@ eprogress 是一个简单、易用的基于Python3的命令行(terminal)进度�
 
 > 作者：竹尘居士
 >
-> 博客：http://www.cnblogs.com/homg
+> 博客：http://www.cnblogs.com/homg/p/7232540.html
 
 
 
