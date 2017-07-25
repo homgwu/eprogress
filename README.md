@@ -1,6 +1,6 @@
 # eprogress
 
-[![PyPI](https://img.shields.io/badge/pypi-v1.0.4-blue.svg)](https://pypi.python.org/pypi?:action=display&name=eprogress&version=1.0.4)[![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)]() 
+[![PyPI](https://img.shields.io/badge/pypi-v1.0.4-blue.svg)](https://pypi.python.org/pypi?:action=display&name=eprogress&version=1.0.4)[![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/) 
 
 eprogress 是一个简单、易用的基于Python3的命令行(terminal)进度条库，可以自由选择使用单行显示、多行显示进度条或转圈加载方式，也可以混合使用。
 
@@ -31,8 +31,8 @@ eprogress 是一个简单、易用的基于Python3的命令行(terminal)进度�
 ## 特性
 
 - 使用简单，实例化一个Progress对象，调用update方法即可刷新进度
-- 可定制进度条title，说明进度代表什么。
-- 可定制进度符号，个性化显示。
+- 不依赖任何第三方库。
+- 可定制进度符号，title，显示宽度，个性化显示。
 - 多行、单行显示进度、圆形转圈加载随意搭配。
 - 多线程安全，可在多个线程中更新进度条。
 
